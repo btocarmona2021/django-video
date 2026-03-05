@@ -1,0 +1,15 @@
+services:
+  backend:
+    image: video-backend:0.1
+    build:
+      context: ./config/django_image
+    volumes:
+      - ./src/django:/usr/src/app:delegated
+    ports:
+      - "8000:8000"
+    networks:
+      - red
+
+networks:
+  red:
+
