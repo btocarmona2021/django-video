@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Esta es mi cuarta plantilla</h1>
+
+    <p>Nombre: <strong>{{ mi_empleado.nombre }}</strong> <em>{{ mi_empleado.apellido }}</em></p>
+    <p>Año: {{ fecha_actual.year }}</p>
+    <p>Mes: {{ fecha_actual.month }}</p>
+    <p>Día: {{ fecha_actual.day }}</p>
+
+    <p>Días laborables:</p>
+    {% if dias_laborables %}
+    <ul>
+        {% for elemento in dias_laborables %}
+        <li>{{ elemento }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+</body>
+</html>

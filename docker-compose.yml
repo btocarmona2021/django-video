@@ -3,6 +3,7 @@ services:
     image: video-backend:0.1
     build:
       context: ./config/django_image
+    user: "${UID}:${GID}"          # ← agregá esta línea
     volumes:
       - ./src/django:/usr/src/app:delegated
     ports:
@@ -12,4 +13,3 @@ services:
 
 networks:
   red:
-
